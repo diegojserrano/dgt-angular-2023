@@ -1,0 +1,8 @@
+<div>
+  <h1>{{ texto }}</h1>
+  <p *ngIf="numero > 50">{{ numero }}</p>
+  <p *ngIf="numero <= 50">Es menor a 50</p>
+  <table>
+    <tr *ngFor="let x of codigos"><td>{{ x }} <button *ngIf="x < 50">Comprar</button> </td></tr>
+  </table>
+</div>

@@ -1,0 +1,12 @@
+div {
+  padding: 30px;
+  border: 2px solid;
+  background-color: cornsilk;
+  margin: 10px;
+}
+
+table,
+tr,
+td {
+  border: 1px solid black;
+}
