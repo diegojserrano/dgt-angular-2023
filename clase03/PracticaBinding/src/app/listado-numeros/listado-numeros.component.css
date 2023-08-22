@@ -1,0 +1,17 @@
+td, table {
+    border: 1px solid black
+}
+
+.par {
+    background-color: aquamarine;
+    font-weight: bold;
+}
+
+.impar {
+    background-color: darksalmon;
+}
+
+.mayor {
+
+    font-size: xx-large;
+}

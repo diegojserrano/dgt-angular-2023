@@ -1,0 +1,12 @@
+<p>Listado de números al azar</p>
+
+<table>
+    <!--por cada n tal que n pertenece a numeros-->
+    <tr *ngFor="let n of numeros">
+        <!--td [class.par]="esPar(n)" [class.impar]="!esPar(n)"-->
+        <td [class]="{par: esPar(n), impar:!esPar(n), mayor: n > 500}">
+            {{ n }}
+        </td>
+        <td><button (click)="detalle(n)">Ver detalle</button></td>
+    </tr>
+</table>
