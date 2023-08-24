@@ -1,0 +1,25 @@
+<table  *ngIf="seleccionada">
+    <tr>
+        <td>Documento</td><td><input type="number" name="" id="" [value]="seleccionada.documento"></td>
+    </tr><tr>
+        <td>Apellido</td><td>{{ seleccionada.apellido }}</td>
+    </tr><tr>
+        <td>Nombre</td><td>{{ seleccionada.nombre }}</td>
+    </tr><tr>
+        <td>Edad</td><td>{{ seleccionada.edad }}</td>
+    </tr>
+</table>
+
+<!-- Modificar para que se vea en una tabla --> 
+<table>
+<tr><th>Numero</th><th>Apellido</th><th>Nombre</th><th></th></tr>
+<tr *ngFor="let cada_persona of personas; let i = index">
+<td>{{ i }}</td>
+    <td>{{ cada_persona.apellido }}</td>
+<td>{{ cada_persona.nombre }}</td>
+<td><button (click)="ver_detalle(cada_persona)">Detalle</button>
+    <button (click)="seleccionar(cada_persona)">Seleccionar</button>
+    <button (click)="eliminar(i)">Eliminar</button>
+</td>
+</tr>
+</table>
