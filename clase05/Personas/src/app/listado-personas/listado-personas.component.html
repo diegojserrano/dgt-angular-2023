@@ -1,0 +1,42 @@
+<table  *ngIf="seleccionada" id="formulario">
+    <tr *ngIf="agregando"><td colspan="2">Nueva Persona</td></tr>
+    <tr>
+        <td>Documento</td><td><input type="number" [(ngModel)]="seleccionada.documento"></td>
+    </tr><tr>
+        <td>Apellido</td><td><input type="text" [(ngModel)]="seleccionada.apellido"></td>
+    </tr><tr>
+        <td>Nombre</td><td><input type="text" [(ngModel)]="seleccionada.nombre"></td>
+    </tr><tr>
+        <td>Edad</td><td><input type="number" min="0" max="120" [(ngModel)]="seleccionada.edad"></td>
+    </tr>
+    <tr *ngIf="agregando"><td></td><td>
+        <button (click)="guardar()">Guardar</button> 
+        <button (click)="cancelar()">Cancelar</button> 
+    </td></tr>
+</table>
+
+<!-- Modificar para que se vea en una tabla --> 
+<button (click)="agregar()">Nueva</button>
+<br>
+<table>
+
+<tr><th>Numero</th><th>Apellido</th><th>Nombre</th><th></th></tr>
+<tr>
+    <td></td>
+    <td><input type="text" [(ngModel)]="filtro"/></td>
+    <td></td>
+    <td><button (click)="buscar()">Buscar</button></td>
+</tr>
+
+
+
+<tr *ngFor="let cada_persona of personas; let i = index">
+<td>{{ i }}</td>
+    <td>{{ cada_persona.apellido }}</td>
+<td>{{ cada_persona.nombre }}</td>
+<td><button (click)="ver_detalle(cada_persona)">Detalle</button>
+    <button (click)="seleccionar(cada_persona)">Seleccionar</button>
+    <button (click)="eliminar(i)">Eliminar</button>
+</td>
+</tr>
+</table>
