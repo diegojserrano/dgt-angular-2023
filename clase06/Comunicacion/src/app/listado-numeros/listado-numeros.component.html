@@ -1,0 +1,8 @@
+<h3>Listado de números</h3>
+
+
+<div *ngFor="let x of numeros">
+    <app-detalle-numero [n]="x" 
+    (onBorrar)="alBorrar($event)">
+    </app-detalle-numero>
+</div>
