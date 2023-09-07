@@ -23,7 +23,10 @@
 
 <tr *ngFor="let cada_persona of personas; let i = index">
 <td>{{ i }}</td>
-    <td>{{ cada_persona.apellido | mitadMayusculas }}</td>
+    <td>{{ cada_persona | nombreCompleto }}
+        {{ cada_persona.edad}}<img [src]="cada_persona.edad | semaforoEdad" />
+
+    </td>
 <td>{{ (cada_persona.nombre | mitadMayusculas) + "..."}}</td>
 <td><button (click)="ver_detalle(cada_persona)">Detalle</button>
     <button (click)="seleccionar(cada_persona)">Seleccionar</button>

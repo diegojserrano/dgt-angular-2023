@@ -10,6 +10,8 @@ import { PuntajeComponent } from './puntaje/puntaje.component';
 import { SemaforoComponent } from './semaforo/semaforo.component';
 import { CargaPersonaComponent } from './carga-persona/carga-persona.component';
 import { MitadMayusculasPipe } from './mitad-mayusculas.pipe';
+import { NombreCompletoPipe } from './nombre-completo.pipe';
+import { SemaforoEdadPipe } from './semaforo-edad.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { MitadMayusculasPipe } from './mitad-mayusculas.pipe';
     SemaforoComponent,
     CargaPersonaComponent,
     MitadMayusculasPipe,
+    NombreCompletoPipe,
+    SemaforoEdadPipe,
 
   ],
   imports: [
