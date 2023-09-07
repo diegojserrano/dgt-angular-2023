@@ -1,0 +1,16 @@
+<table id="formulario">
+    <tr *ngIf="agregando"><td colspan="2">Nueva Persona</td></tr>
+    <tr>
+        <td>Documento</td><td><input type="number" [(ngModel)]="persona.documento"></td>
+    </tr><tr>
+        <td>Apellido</td><td><input type="text" [(ngModel)]="persona.apellido"></td>
+    </tr><tr>
+        <td>Nombre</td><td><input type="text" [(ngModel)]="persona.nombre"></td>
+    </tr><tr>
+        <td>Edad</td><td><input type="number" min="0" max="120" [(ngModel)]="persona.edad"></td>
+    </tr>
+    <tr *ngIf="agregando"><td></td><td>
+        <button (click)="guardar()">Guardar</button> 
+        <button (click)="cancelar()">Cancelar</button> 
+    </td></tr>
+</table>
