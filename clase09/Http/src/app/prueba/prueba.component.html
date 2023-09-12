@@ -1,0 +1,24 @@
+<p>Prueba de http</p>
+
+<button (click)="iniciar()">Iniciar petición</button>
+
+<div *ngIf="esperando">
+    Espere!!!
+</div>
+
+
+<app-detalle [documento]="documentoSeleccionado"></app-detalle>
+
+
+<div *ngIf="personas">
+<table>
+    <tr><th>Nombre</th><th>Apellido</th><th></th></tr>
+<tr *ngFor="let p of personas">
+    <td>{{ p.nombre }}</td><td> {{ p.apellido }}</td>  
+    <td>
+         <button (click)="seleccionar(p.id)">Seleccionar</button> 
+         <button (click)="borrar(p.id)">Borrar</button>
+    </td>
+</tr>
+</table>
+</div>
