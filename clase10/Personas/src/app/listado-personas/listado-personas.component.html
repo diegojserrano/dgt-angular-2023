@@ -1,0 +1,37 @@
+<app-carga-persona  [persona]="seleccionada"     
+                    [agregando]="agregando"
+                    *ngIf="seleccionada" 
+                    (alGuardar)="guardar()"
+                    (alCancelar)="cancelar()"
+                    > </app-carga-persona>
+
+
+<!-- Modificar para que se vea en una tabla --> 
+<button (click)="agregar()">Nueva</button>
+<br>
+<table>
+
+<tr><th>Numero</th><th>Apellido</th><th>Nombre</th><th style="width: 300px;"></th></tr>
+<tr>
+    <td></td>
+    <td><input type="text" [(ngModel)]="filtro"/></td>
+    <td></td>
+    <td><button (click)="buscar()">Buscar</button>
+    <button (click)="limpiar()">Limpiar</button>
+    </td>
+</tr>
+
+
+
+<tr *ngFor="let cada_persona of personas; let i = index">
+<td>{{ i }}</td>
+    <td>{{ cada_persona.apellido }}
+        {{ cada_persona.edad}}<img [src]="cada_persona.edad | semaforoEdad" />
+    </td>
+<td>{{ cada_persona.nombre }}</td>
+<td><button (click)="ver_detalle(cada_persona)">Detalle</button>
+    <button (click)="seleccionar(cada_persona)">Seleccionar</button>
+    <button (click)="eliminar(cada_persona.id)">Eliminar</button>
+</td>
+</tr>
+</table>
