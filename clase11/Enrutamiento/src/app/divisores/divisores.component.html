@@ -1,0 +1,7 @@
+<h3>Divisores de {{n}}</h3>
+
+<p *ngIf="divisores.length==0">Es primo</p>
+<ul *ngIf="divisores.length>0">
+    <li *ngFor="let d of divisores">{{d}}   </li>
+
+</ul>

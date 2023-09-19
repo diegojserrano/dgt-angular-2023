@@ -1,0 +1,21 @@
+div {
+    border: 2px solid gray;
+
+    margin: 10px;
+    margin-left: 120px;
+    padding: 10px;
+}
+
+a {
+    background-color: coral;
+    border: 2px solid brown;
+    font-weight: bold;
+    display: block;
+    margin: 4px;
+    padding: 2px;
+}
+
+aside {
+    max-width: 100px;
+    float: left;
+}

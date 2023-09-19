@@ -1,0 +1,17 @@
+
+<h1>Clase  11</h1>
+
+<aside>
+<a routerLink="inicio" >Inicio</a>&nbsp;
+<a routerLink="acerca-de" >Acerca de...</a>
+<a routerLink="divisores-de" >Divisores de...</a>
+
+<a routerLink="divisores-de/{{i}}"
+ *ngFor="let i of numeros">{{i}}</a>
+</aside>
+<div>
+
+  <router-outlet></router-outlet>
+
+</div>
+
