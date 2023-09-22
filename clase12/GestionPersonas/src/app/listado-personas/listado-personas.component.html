@@ -1,0 +1,16 @@
+<h2>Listado de personas</h2>
+
+Buscar por apellido<br>
+<input [(ngModel)]="filtro">&nbsp;
+<button (click)="buscar()">Buscar</button>
+<br>
+<br>
+
+<table>
+    <tr><th>Nombre</th><th>Apellido</th><th></th></tr>
+    <tr *ngFor="let p of personas">
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.apellido }}</td>
+        <td><a routerLink="/personas/{{p.id}}">Ver detalle</a></td>
+    </tr>
+</table>

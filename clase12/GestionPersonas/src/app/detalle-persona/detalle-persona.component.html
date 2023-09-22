@@ -1,0 +1,12 @@
+
+<h2>Detalle de persona</h2>
+
+<a routerLink="..">Volver al listado</a><br>
+<a href="javascript:history.back()">Volver</a>
+
+<div *ngIf="persona">
+Documento: {{persona.id}} <br>
+Nombre: {{persona.nombre}}<br>
+Apellido: {{persona.apellido}}<br>
+Edad: {{persona.edad}}<br>
+</div>
