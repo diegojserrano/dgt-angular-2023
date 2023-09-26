@@ -1,0 +1,22 @@
+.ng-dirty {
+    background-color: bisque;
+}
+
+.ng-invalid {
+    background-color:coral ;
+}
+
+
+.ng-pristine {
+    background-color: azure;
+}
+/*
+.ng-valid
+.ng-invalid
+.ng-pending
+.ng-pristine
+.ng-dirty
+.ng-untouched
+.ng-touched
+.ng-submitted (solo para el form)
+*/

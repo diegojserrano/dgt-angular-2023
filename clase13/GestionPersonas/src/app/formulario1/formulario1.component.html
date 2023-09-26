@@ -1,0 +1,17 @@
+<p>Formulario de prueba</p>
+
+<form [formGroup]="formulario">
+Titulo: <input formControlName="titulo" /> <br>
+Precio: <input formControlName="precio" type="number" /> <br>
+
+<button (click)="guardar()" [disabled]="formulario.invalid">Guardar</button>
+</form>
+
+<br><br>
+
+{{formulario.value | json}} {{formulario.status}}<br>
+
+<!--
+{{titulo.value}} {{titulo.status}} {{titulo.errors | json}}<br>
+{{precio.value}} {{precio.status}} {{precio.errors | json}}
+-->

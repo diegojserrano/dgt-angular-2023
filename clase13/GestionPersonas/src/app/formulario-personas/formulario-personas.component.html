@@ -1,0 +1,18 @@
+<h2>{{ titulo }}</h2>
+
+<form [formGroup]="formPersona">
+<table>
+    <tr><td>Documento</td><td><input type="text" formControlName="id" /></td></tr>
+    <tr><td>Nombre</td><td><input formControlName="nombre" /></td></tr>
+    <tr><td>Apellido</td><td><input formControlName="apellido"></td></tr>
+    <tr><td>Edad</td><td><input type="number" formControlName="edad"></td></tr>
+    <tr><td></td><td>
+        <button (click)="guardar()" [disabled]="formPersona.invalid">Guardar</button>
+        <button>Cancelar</button>
+    </td></tr>
+</table>
+</form>
+
+<br><br>
+
+{{formPersona.value | json}} {{formPersona.status}}<br>
