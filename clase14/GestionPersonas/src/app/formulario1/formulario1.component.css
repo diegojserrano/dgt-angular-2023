@@ -1,0 +1,10 @@
+.ng-dirty:not(form){
+    background-color: violet;
+}
+.ng-invalid:not(form){
+    background-color: coral;
+}
+.ng-pristine:not(form){
+    background-color: azure;
+}
+

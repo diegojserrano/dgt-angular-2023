@@ -1,0 +1,37 @@
+<br>
+<h1>{{titulo}}</h1>
+
+
+<form [formGroup]="formularioPersonas">
+    <div class="col-md-8 d-flex">
+        <label for="">Documento</label>
+        <input type="text" formControlName="id" readonly/>
+    </div>
+    <div class="col-md-8 d-flex">
+        <label for="">Nombre</label>
+        <input type="text" formControlName="nombre" />
+    </div>
+    <div class="col-md-8 d-flex">
+        <label for="">Apellido</label>
+        <input type="text" formControlName="apellido"/>
+    </div>
+    <div class="col-md-8 d-flex">
+        <label for="">Edad</label>
+        <input type="number" formControlName="edad"/>
+    </div>
+    <div class="col-md-8 d-flex">
+        <label for="">Deporte</label>
+        <select formControlName="idDeporte">
+            <option *ngFor="let deporte of Deportes" [value]="deporte.id">{{deporte.nombre}}</option>
+        </select>
+    </div>
+    <br>
+    <div class="col-md-8 d-flex">
+        <button (click)="guardar()" [disabled]="formularioPersonas.invalid">Guardar</button>
+    </div>
+
+</form>
+<br><br>
+
+{{formularioPersonas.value | json}} {{formularioPersonas.status}} {{formularioPersonas.errors| json}}
+

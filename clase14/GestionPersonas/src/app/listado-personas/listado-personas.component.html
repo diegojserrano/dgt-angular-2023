@@ -1,0 +1,30 @@
+
+    <app-cantidad-personas [cantidad]="personas.length"></app-cantidad-personas>
+    <hr>
+    
+    <!-- Modificar para que se vea en una tabla --> 
+    <button class="btn btn-info btn-sm" [routerLink]="'/personas/nueva'">Nueva</button>
+    <br>
+    <table [cellPadding]="10">
+    
+    <tr><th>Numero</th><th>Apellido</th><th>Nombre</th><th>Deporte</th><th></th></tr>
+    <tr>
+        <td></td>
+        <td><div class="d-flex"><input class="form-control" type="text" [(ngModel)]="filtro"/><button class="btn btn-primary" (click)="buscar()">Buscar</button></div></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    
+    
+    <tr *ngFor="let cada_persona of personas; let i = index">
+    <td>{{ i }}</td>
+        <td>{{ cada_persona.apellido }}</td>
+    <td>{{ cada_persona.nombre }}</td>
+    <td>{{ getNombreDeporte(cada_persona.idDeporte) }}</td>
+    <td><button class="btn btn-info" [routerLink]="'/personas/'+cada_persona.id+'/detalle'">Detalle</button>
+        <button class="btn btn-secondary" [routerLink]="'/personas/modificar/'+cada_persona.id">Modificar</button>
+        <button class="btn btn-dark" (click)="eliminar(cada_persona.id)">Eliminar</button>
+    </td>
+    </tr>
+    </table>

@@ -1,0 +1,11 @@
+<h2 class="mt-5">Detalle de persona</h2>
+
+<div *ngIf="persona && deporte" class="alert alert-info">
+    <p><b>Documento: </b>{{persona.id}}</p>
+    <p><b>Nombres: </b>{{persona.nombre}}</p>
+    <p><b>Apellido: </b>{{persona.apellido}}</p>
+    <p><b>Edad: </b>{{persona.edad}}</p>
+    <p><b>Deporte: </b>{{deporte.nombre}}</p>
+</div>
+
+<button class="btn btn-dark" routerLink="../..">VOLVER</button>
