@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem; margin: auto;">
+  <img src="https://www.pngfind.com/pngs/m/676-6764065_default-profile-picture-transparent-hd-png-download.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ usuario.username }}</h5>
+    <p class="card-text"><small class="text-muted">{{ usuario.email }}</small></p>
+  </div>
+  <div class="card-header">
+    Roles
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let rol of usuario.roles">{{rol}}</li>
+  </ul>
+</div>
